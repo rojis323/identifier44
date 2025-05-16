@@ -1,0 +1,168 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Logo screen */
+  #logo-screen {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Questionnaire container */
+  #questionnaire {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Step title */
+  .step h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form questions */
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Result section */
+  #result {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: none;
+  }
+  
+  #score {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #advice {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  details {
+    margin-top: 20px;
+  }
+  
+  /* Mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    .logo {
+      width: 120px;
+    }
+  
+    #questionnaire,
+    #result {
+      padding: 15px;
+      width: 100%;
+      box-shadow: none;
+    }
+  
+    button {
+      padding: 8px 16px;
+    }
+  
+    #score {
+      font-size: 1.2rem;
+    }
+  
+    #advice {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Larger screen styling (for desktop) */
+  @media screen and (min-width: 769px) {
+    #questionnaire,
+    #result {
+      padding: 25px;
+    }
+  
+    button {
+      padding: 12px 25px;
+    }
+  
+    #score {
+      font-size: 1.8rem;
+    }
+  
+    #advice {
+      font-size: 1rem;
+    }
+  }
+  

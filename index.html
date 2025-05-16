@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Identifier</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="logo-screen">
+    <img src="logo.png" alt="App Logo" class="logo">
+  </div>
+
+  <div id="questionnaire" style="display:none">
+    <form id="stressForm">
+      <!-- Step 1: Lifestyle & Routine -->
+      <div id="step1" class="step">
+        <h2>🧠 Step 1: Lifestyle & Routine</h2>
+
+        <div class="question">How many hours of sleep do you get on average per night?
+          <select name="q1">
+            <option value="4">Less than 4 hours</option>
+            <option value="3">4–6 hours</option>
+            <option value="2">6–8 hours</option>
+            <option value="1">More than 8 hours</option>
+          </select>
+        </div>
+
+        <div class="question">Do you feel rested when you wake up?
+          <select name="q2">
+            <option value="4">Never</option>
+            <option value="3">Sometimes</option>
+            <option value="2">Often</option>
+            <option value="1">Always</option>
+          </select>
+        </div>
+
+        <div class="question">How often do you exercise (20+ minutes a session)?
+          <select name="q3">
+            <option value="4">Never</option>
+            <option value="3">1–2 times/week</option>
+            <option value="2">3–4 times/week</option>
+            <option value="1">Daily</option>
+          </select>
+        </div>
+
+        <div class="question">How many hours do you spend on screens daily?
+          <select name="q4">
+            <option value="1">Less than 2 hours</option>
+            <option value="2">2–4 hours</option>
+            <option value="3">4–6 hours</option>
+            <option value="4">More than 6 hours</option>
+          </select>
+        </div>
+
+        <div class="question">How would you rate your diet in the past week?
+          <select name="q5">
+            <option value="4">Poor (mostly processed/junk food)</option>
+            <option value="3">Fair (some balance)</option>
+            <option value="2">Good (mostly healthy)</option>
+            <option value="1">Excellent (well-balanced, fresh meals)</option>
+          </select>
+        </div>
+
+        <div class="question">How often do you consume caffeine?
+          <select name="q6">
+            <option value="1">Never</option>
+            <option value="2">1 cup/day</option>
+            <option value="3">2–3 cups/day</option>
+            <option value="4">More than 3 cups/day</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="nextStep(2)">Next</button>
+      </div>
+
+      <!-- Step 2: Emotional & Mental State -->
+      <div id="step2" class="step" style="display:none">
+        <h2>😵‍💫 Step 2: Emotional & Mental State</h2>
+
+        <div class="question">How often do you feel overwhelmed or unable to cope?
+          <select name="q7">
+            <option value="1">Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+            <option value="4">Always</option>
+          </select>
+        </div>
+
+        <div class="question">How often do you feel anxious or worried without a clear reason?
+          <select name="q8">
+            <option value="1">Never</option>
+            <option value="2">Occasionally</option>
+            <option value="3">Frequently</option>
+            <option value="4">Almost constantly</option>
+          </select>
+        </div>
+
+        <div class="question">Do you experience mood swings or irritability?
+          <select name="q9">
+            <option value="1">Rarely</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+            <option value="4">Very often</option>
+          </select>
+        </div>
+
+        <div class="question">How motivated do you feel to do daily tasks?
+          <select name="q10">
+            <option value="1">Very motivated</option>
+            <option value="2">Somewhat motivated</option>
+            <option value="3">Low motivation</option>
+            <option value="4">No motivation at all</option>
+          </select>
+        </div>
+
+        <div class="question">Do you have difficulty concentrating or making decisions?
+          <select name="q11">
+            <option value="1">Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+            <option value="4">Always</option>
+          </select>
+        </div>
+
+        <div class="question">Do you often feel physically tense?
+          <select name="q12">
+            <option value="1">Never</option>
+            <option value="2">Occasionally</option>
+            <option value="3">Frequently</option>
+            <option value="4">Very often</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="nextStep(3)">Next</button>
+      </div>
+
+      <!-- Step 3: Social & Behavioral Patterns -->
+      <div id="step3" class="step" style="display:none">
+        <h2>👥 Step 3: Social & Behavioral Patterns</h2>
+
+        <div class="question">How connected do you feel to your friends or family?
+          <select name="q13">
+            <option value="1">Very connected</option>
+            <option value="2">Somewhat connected</option>
+            <option value="3">Rarely connected</option>
+            <option value="4">Isolated</option>
+          </select>
+        </div>
+
+        <div class="question">How often do you withdraw from others?
+          <select name="q14">
+            <option value="1">Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+            <option value="4">Always</option>
+          </select>
+        </div>
+
+        <div class="question">Have your work/study performance declined recently?
+          <select name="q15">
+            <option value="1">No, it's improved</option>
+            <option value="2">Slightly</option>
+            <option value="3">Noticeably</option>
+            <option value="4">Significantly</option>
+          </select>
+        </div>
+
+        <div class="question">Do you cope with stress using substances?
+          <select name="q16">
+            <option value="1">Never</option>
+            <option value="2">Rarely</option>
+            <option value="3">Often</option>
+            <option value="4">Very often</option>
+          </select>
+        </div>
+
+        <div class="question">How often do you procrastinate or avoid responsibilities?
+          <select name="q17">
+            <option value="1">Rarely</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+            <option value="4">Always</option>
+          </select>
+        </div>
+
+        <div class="question">Do you experience changes in appetite?
+          <select name="q18">
+            <option value="1">Never</option>
+            <option value="2">Sometimes</option>
+            <option value="3">Often</option>
+            <option value="4">Always</option>
+          </select>
+        </div>
+
+        <div class="question">On a scale of 0–25, how stressed do you feel right now?
+          <select name="selfRating">
+            <option value="0">0 (No stress)</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25 (Very stressed)</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="result" style="display:none">
+    <h2>Your Stress Level</h2>
+    <p id="score"></p>
+    <p id="advice"></p>
+    <details>
+      <summary>See Detailed Analysis</summary>
+      <p id="details"></p>
+    </details>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
